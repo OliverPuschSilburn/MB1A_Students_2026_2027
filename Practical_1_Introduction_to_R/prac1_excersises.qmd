@@ -1,0 +1,21 @@
+---
+title: "Practical 1 Excersises"
+author: "Oliver Pusch-Silburn"
+---
+Function practice:
+```{r}
+round(3.14159)
+round(3.14159, digits = 2)
+print(rep(5,7))
+print(rep(x=5, times=7))
+```
+Variable practice:
+```{r}
+x = 532.5
+y = "Hello"
+z = TRUE
+print(paste(x,",", y,",", z))
+print(paste (class(x),",", class(y),",", class(z)))
+```
+
+
