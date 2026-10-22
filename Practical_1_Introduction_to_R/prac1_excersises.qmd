@@ -17,5 +17,37 @@ z = TRUE
 print(paste(x,",", y,",", z))
 print(paste (class(x),",", class(y),",", class(z)))
 ```
-
+Variables and vectors:
+```{r}
+library(tidyverse)
+library(gt)
+ID_1="CX1"
+ID_2="CX2"
+Treated_1=TRUE
+Treated_2=FALSE
+num_cells_before_1=5415
+num_cells_before_2=8123
+num_cells_after_1=1432
+num_cells_after_2=7543
+IDs = c(ID_1, ID_2)
+Treated = c(Treated_1, Treated_2)
+cells_before = c(num_cells_before_1, num_cells_before_2)
+cells_after = c(num_cells_after_1, num_cells_after_2)
+print(paste(IDs, Treated, cells_before,cells_after))
+```
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+my_favourite = all_my_pets[4]
+print(my_favourite)
+```
+Data Frames:
+```{r}
+Cell_table = tibble(cell_ID = IDs, treated = Treated, num_cells_before = cells_before, num_cells_after = cells_after)
+gt(Cell_table)
+```
+CSV import:
+```{r}
+weather = read_csv("data/weather_data.csv")
+gt(weather)
+```
 

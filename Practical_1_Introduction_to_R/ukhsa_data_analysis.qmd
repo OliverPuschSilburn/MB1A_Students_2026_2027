@@ -1,0 +1,21 @@
+---
+title: "UKHSA data analysis"
+author: "Oliver Pusch Silburn"
+---
+Analysis of gov.uk data:
+```{r}
+library(tidyverse)
+library(gt)
+
+```
+Gov.uk data:
+```{r}
+antibiotics = read.csv("data/ukhsa-chart-download.csv")
+gt(head(antibiotics))
+```
+Plotting graphs:
+```{r}
+antibiotics$Date <- as.Date(antibiotics$date)
+ggplot(antibiotics, aes(x= Date, y=metric_value)) + geom_line(colour = "green") +xlab("Date")+ylab("Antibiotics consumption - doses per 1000 inhabitants per day") + ggtitle("antibiotics consumption over time")
+```
+
