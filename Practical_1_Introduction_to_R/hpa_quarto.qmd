@@ -1,0 +1,16 @@
+---
+title: "Brain Data"
+author: "Oliver Pusch-Silburn"
+---
+Calculating regionally elevated genes in the forebrain in pigs, mice and humans. The data I'm using can be found [here](https://www.proteinatlas.org/humanproteome/brain)
+```{r}
+library(styler)
+
+human <- sum(180, 83, 57, 110)
+pig <- sum(109, 157, 31, 45)
+mouse <- sum(55, 185, 60, 98)
+print(paste("humans have ", human, " elevated genes in the forebrain"))
+print(paste("pigs have ", pig, " elevated genes in the forebrain"))
+print(paste("mice have ", mouse, " elevated genes in the forebrain"))
+```
+Humans have the most regionally elevated genes in the forebrain.
