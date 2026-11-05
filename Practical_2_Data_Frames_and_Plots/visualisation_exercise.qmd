@@ -1,0 +1,19 @@
+---
+title: "Visualisation Excercise"
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+library(janitor)
+library(lubridate)
+```
+
+```{r}
+hawk_locations <- read_csv("data/movebank_data.csv") |>
+  clean_names() |>
+  mutate(date = as_date(timestamp))
+
+gt(hawk_locations)
+```
+
